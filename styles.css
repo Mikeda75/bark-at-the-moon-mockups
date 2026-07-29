@@ -203,11 +203,19 @@ section { padding: 64px 0; }
   position: absolute;
   inset: 0;
   background: url("assets/flash-bg.png") repeat;
-  background-size: 460px 460px;
+  background-size: 380px 380px;
   opacity: 0.07;
   pointer-events: none;
 }
 .flash-bg > .wrap { position: relative; }
+
+/* tattoo-parlor lettering for select headlines */
+.tattoo-font, h2.title.tattoo-font {
+  font-family: "Rye", "Bebas Neue", serif;
+  font-size: clamp(22px, 3.4vw, 36px);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
 .section-cream { background: var(--cream); color: var(--text-dark); }
 .section-dark { background: var(--night); }
 .section-ink { background: var(--ink); }
