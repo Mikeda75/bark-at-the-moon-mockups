@@ -195,6 +195,19 @@ section { padding: 64px 0; }
 .wrap-narrow { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
 .section-light { background: var(--paper); color: var(--text-dark); }
+
+/* tattoo flash sheet tiled behind a section, faint like an old stencil */
+.flash-bg { position: relative; }
+.flash-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/flash-bg.png") repeat;
+  background-size: 460px 460px;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.flash-bg > .wrap { position: relative; }
 .section-cream { background: var(--cream); color: var(--text-dark); }
 .section-dark { background: var(--night); }
 .section-ink { background: var(--ink); }
