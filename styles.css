@@ -425,6 +425,17 @@ blockquote.pull {
   transform: rotate(-2deg);
 }
 
+/* transparent-cut badge logo — no frame, just a moonlit glow */
+.hero-badge {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 34px rgba(244,236,220,0.22))
+    drop-shadow(0 0 90px rgba(240,177,60,0.16))
+    drop-shadow(0 14px 26px rgba(0,0,0,0.45));
+}
+
 .photo-frame {
   width: 100%;
   border: 3px solid var(--ink);
@@ -545,6 +556,7 @@ footer a { color: #a59d8e; }
   .hero-copy > div[style] { justify-content: center !important; }
 
   .hero-logo { max-width: min(400px, 88vw); }
+  .hero-badge { max-width: min(430px, 90vw); }
   .moon-img { width: min(300px, 82vw); height: auto; }
   .awoo { top: -26px; right: 8%; font-size: 18px; }
 
