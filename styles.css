@@ -138,8 +138,9 @@ header {
   align-items: center;
   gap: 48px;
 }
-.hero-copy { flex: 1.1; }
-.hero-art { flex: 1; text-align: center; position: relative; }
+.hero-copy { flex: 1; }
+/* art column gets the wider share so a real photo reads at a decent size */
+.hero-art { flex: 1.2; text-align: center; position: relative; }
 
 .eyebrow {
   display: inline-block;
@@ -172,7 +173,10 @@ header {
 
 .awoo {
   position: absolute;
-  top: -10px;
+  /* transform/filter on the hero art makes it its own paint layer, which buries
+     an auto-z-index marker. z-index keeps the scribble on top. */
+  z-index: 2;
+  top: -22px;
   right: 4%;
   transform: rotate(12deg);
   color: var(--red);
@@ -467,15 +471,6 @@ blockquote.pull {
 }
 
 /* ── real assets: photos & cert emblems ───────── */
-.hero-photo {
-  width: 280px; height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--cream);
-  box-shadow: 0 0 0 4px var(--ink), 0 12px 40px rgba(0,0,0,0.5);
-  position: relative;
-  z-index: 2;
-}
 .hero-logo {
   width: 100%;
   max-width: 520px;
@@ -489,9 +484,9 @@ blockquote.pull {
    red offset block to match the .photo-frame treatment further down the page */
 .hero-photo {
   width: 100%;
-  max-width: 420px;
+  max-width: 560px;
   height: auto;
-  border: 4px solid var(--cream);
+  border: 5px solid var(--cream);
   border-radius: 14px;
   transform: rotate(-1.5deg);
   box-shadow: 10px 10px 0 var(--red), 0 20px 44px rgba(0,0,0,0.5);
@@ -629,7 +624,7 @@ footer a { color: #a59d8e; }
   .hero-copy > div[style] { justify-content: center !important; }
 
   .hero-logo { max-width: min(400px, 88vw); }
-  .hero-photo { max-width: min(340px, 84vw); }
+  .hero-photo { max-width: min(460px, 92vw); }
   .hero-badge { max-width: min(430px, 90vw); }
   .moon-img { width: min(300px, 82vw); height: auto; }
   .awoo { top: -26px; right: 8%; font-size: 18px; }
