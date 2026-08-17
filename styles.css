@@ -612,7 +612,9 @@ footer a { color: #a59d8e; }
   .topbar { font-size: 12.5px; padding: 7px 12px; }
 
   .hero-inner {
-    flex-direction: column-reverse;
+    /* copy first on phones. the art used to lead here, which pushed the
+       headline and the waitlist button below the fold. */
+    flex-direction: column;
     text-align: center;
     padding: 40px 20px 52px;
     gap: 36px;
